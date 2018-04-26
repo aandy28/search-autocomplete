@@ -1,0 +1,5 @@
+.babelrc
+*.log
+src
+*.test.js
+__snapshots__

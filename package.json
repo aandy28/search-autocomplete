@@ -1,0 +1,41 @@
+{
+  "name": "search-autocomplete",
+  "version": "0.0.4",
+  "description": "This component is our search component. On search we will try and present the user with the category / brand / products they want.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -r ./dist",
+    "dev": "watch 'npm run lint && npm run dev_build' ./src",
+    "dev_build": "babel ./src --out-dir ./dist",
+    "lint": "eslint \"./src/**/*.js\"",
+    "prepare": "npm run clean && npm run production_build",
+    "production_build": "BABEL_ENV=production babel ./src --out-dir ./dist",
+    "test": "jest --testPathPattern ./src/.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Andrew Smith",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.3.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^22.4.2",
+    "react-test-renderer": "^16.2.0",
+    "watch": "^1.0.2",
+    "styled-components": "^3.2.1"
+  },
+  "peerDependencies": {
+    "styled-components": "^2.4.0"
+  }
+}
